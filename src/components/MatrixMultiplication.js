@@ -27,9 +27,11 @@ const styles = (theme) => ({
     alignItems: 'center'
   },
   rightAnswer: {
+    fontSize: 'x-large',
     color: 'green'
   },
   wrongAnswer: {
+    fontSize: 'x-large',
     color: 'red'
   }
 })
@@ -147,13 +149,9 @@ class MatrixMultiplication extends Component {
             {hasExercise ? (
               <div>
                 {isCorrect ? (
-                  <Typography className={classes.rightAnswer} variant="body1">
-                    Correct
-                  </Typography>
+                  <span className={classes.rightAnswer}>&#x2714;</span>
                 ) : (
-                  <Typography className={classes.wrongAnswer} variant="body1">
-                    Incorrect
-                  </Typography>
+                  <span className={classes.wrongAnswer}>&#x2718;</span>
                 )}
               </div>
             ) : (
