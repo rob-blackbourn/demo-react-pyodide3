@@ -27,7 +27,9 @@ class App extends Component {
 
   async componentDidMount() {
     const pythonWorker = Comlink.wrap(new PythonWorker())
+    console.log('Calling setup')
     await pythonWorker.setup()
+    console.log('Setup returned')
     this.setState({ pythonWorker })
   }
 

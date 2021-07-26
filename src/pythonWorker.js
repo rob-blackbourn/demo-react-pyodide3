@@ -2,6 +2,12 @@ import * as Comlink from 'comlink/dist/esm/comlink'
 
 self.importScripts('https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js') // eslint-disable-line no-restricted-globals
 
+async function loadPyodideAndPackages() {
+  await self.loadPyodide({ indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.17.0/full/' }) // eslint-disable-line no-restricted-globals
+  await self.pyodide.loadPackage(['numpy']) // eslint-disable-line no-restricted-globals
+}
+const pyodideReadyPromise = loadPyodideAndPackages()
+
 const PYTHON_CODE = `
 import random
 import numpy as np
@@ -43,8 +49,8 @@ def generate_matadd_exercise(max_rows, max_cols):
     }    
 `
 
-function wrapGenerateMatmulExercise(pyodide) {
-  const func = pyodide.globals.get('generate_matmul_exercise')
+function wrapGenerateMatmulExercise() {
+  const func = self.pyodide.globals.get('generate_matmul_exercise') // eslint-disable-line no-restricted-globals
 
   return (maxNumberOfRows, maxNumberOfColumns) => {
     console.log('generateMatmulExercise')
@@ -71,8 +77,8 @@ function wrapGenerateMatmulExercise(pyodide) {
   }
 }
 
-function wrapGenerateMataddExercise(pyodide) {
-  const func = pyodide.globals.get('generate_matadd_exercise')
+function wrapGenerateMataddExercise() {
+  const func = self.pyodide.globals.get('generate_matadd_exercise') // eslint-disable-line no-restricted-globals
 
   return (maxNumberOfRows, maxNumberOfColumns) => {
     const obj = func(maxNumberOfRows, maxNumberOfColumns)
@@ -98,24 +104,11 @@ function wrapGenerateMataddExercise(pyodide) {
 }
 
 const pythonContext = {
-  setup() {
-    self // eslint-disable-line no-restricted-globals
-      .loadPyodide({
-        indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.17.0/full/'
-      })
-      .then((pyodide) => {
-        pyodide
-          .loadPackage(['numpy'])
-          .then(() => {
-            pyodide.runPython(PYTHON_CODE)
-
-            this.generateMatmulExercise = wrapGenerateMatmulExercise(pyodide)
-            this.generateMataddExercise = wrapGenerateMataddExercise(pyodide)
-          })
-          .catch((error) => {
-            console.log(error)
-          })
-      })
+  async setup() {
+    await pyodideReadyPromise
+    self.pyodide.runPython(PYTHON_CODE) // eslint-disable-line no-restricted-globals
+    this.generateMatmulExercise = wrapGenerateMatmulExercise()
+    this.generateMataddExercise = wrapGenerateMataddExercise()
   }
 }
 
