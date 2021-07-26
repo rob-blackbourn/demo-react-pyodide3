@@ -91,6 +91,20 @@ class MatrixMultiplication extends Component {
     )
   }
 
+  onMaxRowsChangedHandler = (event) => {
+    const maxNumberOfRows = parseInt(event.target.value)
+    if (Number.isInteger(maxNumberOfRows) && maxNumberOfRows > 0) {
+      this.setState({ maxNumberOfRows })
+    }
+  }
+
+  onMaxColsChangedHandler = (event) => {
+    const maxNumberOfColumns = parseInt(event.target.value)
+    if (Number.isInteger(maxNumberOfColumns) && maxNumberOfColumns > 0) {
+      this.setState({ maxNumberOfColumns })
+    }
+  }
+
   render() {
     const { maxNumberOfRows, maxNumberOfColumns, A, B, C, answer, hasExercise, isGenerating } = this.state
     const { classes } = this.props
@@ -101,8 +115,20 @@ class MatrixMultiplication extends Component {
       <Container maxWidth="sm">
         <Paper className={classes.paper}>
           <form onSubmit={this.handleSubmit}>
-            <TextField className={classes.parameter} type="number" value={maxNumberOfRows} label="Max Rows" />
-            <TextField className={classes.parameter} type="number" value={maxNumberOfColumns} label="Max Columns" />
+            <TextField
+              className={classes.parameter}
+              type="number"
+              value={maxNumberOfRows}
+              label="Max Rows"
+              onChange={this.onMaxRowsChangedHandler}
+            />
+            <TextField
+              className={classes.parameter}
+              type="number"
+              value={maxNumberOfColumns}
+              label="Max Columns"
+              onChange={this.onMaxColsChangedHandler}
+            />
             <Button className={classes.button} type="submit" disabled={isGenerating}>
               New Exercise
             </Button>
