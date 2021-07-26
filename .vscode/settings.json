@@ -1,0 +1,21 @@
+{
+    "cSpell.words": [
+        "Matadd",
+        "Matmul",
+        "bzip",
+        "comlink",
+        "fontsource",
+        "numpy",
+        "pyodide",
+        "randint",
+        "roboto"
+    ],
+    "[javascriptreact]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "[javascript]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    }
+}

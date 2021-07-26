@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.js": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/main.ace4c35a.chunk.js",
+    "main.js.map": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/main.ace4c35a.chunk.js.map",
+    "runtime-main.js": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/runtime-main.379a695c.js",
+    "runtime-main.js.map": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/runtime-main.379a695c.js.map",
+    "static/css/2.2c93498c.chunk.css": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/css/2.2c93498c.chunk.css",
+    "static/js/2.4a8fa149.chunk.js": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/2.4a8fa149.chunk.js",
+    "static/js/2.4a8fa149.chunk.js.map": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/2.4a8fa149.chunk.js.map",
+    "static/js/3.9e290b98.chunk.js": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/3.9e290b98.chunk.js",
+    "static/js/3.9e290b98.chunk.js.map": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/3.9e290b98.chunk.js.map",
+    "index.html": "https://rob-blackbourn.github.io/demo-react-pyodide3/index.html",
+    "static/css/2.2c93498c.chunk.css.map": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/css/2.2c93498c.chunk.css.map",
+    "static/js/2.4a8fa149.chunk.js.LICENSE.txt": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/2.4a8fa149.chunk.js.LICENSE.txt",
+    "static/js/pythonWorker.bff0b05c.worker.js": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/pythonWorker.bff0b05c.worker.js",
+    "static/js/pythonWorker.bff0b05c.worker.js.map": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/pythonWorker.bff0b05c.worker.js.map",
+    "static/media/index.css": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.379a695c.js",
+    "static/css/2.2c93498c.chunk.css",
+    "static/js/2.4a8fa149.chunk.js",
+    "static/js/main.ace4c35a.chunk.js"
+  ]
+}
