@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/main.89a6844d.chunk.js",
-    "main.js.map": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/main.89a6844d.chunk.js.map",
+    "main.js": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/main.884d6158.chunk.js",
+    "main.js.map": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/main.884d6158.chunk.js.map",
     "runtime-main.js": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/runtime-main.379a695c.js",
     "runtime-main.js.map": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/runtime-main.379a695c.js.map",
     "static/css/2.2c93498c.chunk.css": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/css/2.2c93498c.chunk.css",
@@ -12,14 +12,14 @@
     "index.html": "https://rob-blackbourn.github.io/demo-react-pyodide3/index.html",
     "static/css/2.2c93498c.chunk.css.map": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/css/2.2c93498c.chunk.css.map",
     "static/js/2.4a8fa149.chunk.js.LICENSE.txt": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/2.4a8fa149.chunk.js.LICENSE.txt",
-    "static/js/pythonWorker.d41e1e28.worker.js": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/pythonWorker.d41e1e28.worker.js",
-    "static/js/pythonWorker.d41e1e28.worker.js.map": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/pythonWorker.d41e1e28.worker.js.map",
+    "static/js/pythonWorker.78685238.worker.js": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/pythonWorker.78685238.worker.js",
+    "static/js/pythonWorker.78685238.worker.js.map": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/js/pythonWorker.78685238.worker.js.map",
     "static/media/index.css": "https://rob-blackbourn.github.io/demo-react-pyodide3/static/media/roboto-vietnamese-400-normal.c0bec65d.woff2"
   },
   "entrypoints": [
     "static/js/runtime-main.379a695c.js",
     "static/css/2.2c93498c.chunk.css",
     "static/js/2.4a8fa149.chunk.js",
-    "static/js/main.89a6844d.chunk.js"
+    "static/js/main.884d6158.chunk.js"
   ]
 }

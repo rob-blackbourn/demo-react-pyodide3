@@ -2,12 +2,6 @@ import * as Comlink from 'comlink/dist/esm/comlink'
 
 self.importScripts('https://cdn.jsdelivr.net/pyodide/v0.17.0/full/pyodide.js') // eslint-disable-line no-restricted-globals
 
-async function loadPyodideAndPackages() {
-  await self.loadPyodide({ indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.17.0/full/' }) // eslint-disable-line no-restricted-globals
-  await self.pyodide.loadPackage(['numpy']) // eslint-disable-line no-restricted-globals
-}
-const pyodideReadyPromise = loadPyodideAndPackages()
-
 const PYTHON_CODE = `
 import random
 import numpy as np
@@ -103,10 +97,17 @@ function wrapGenerateMataddExercise() {
   }
 }
 
+async function loadPyodideAndPackages() {
+  await self.loadPyodide({ indexURL: 'https://cdn.jsdelivr.net/pyodide/v0.17.0/full/' }) // eslint-disable-line no-restricted-globals
+  await self.pyodide.loadPackage(['numpy']) // eslint-disable-line no-restricted-globals
+  self.pyodide.runPython(PYTHON_CODE) // eslint-disable-line no-restricted-globals
+}
+
+const pyodideReadyPromise = loadPyodideAndPackages()
+
 const pythonContext = {
   async setup() {
     await pyodideReadyPromise
-    self.pyodide.runPython(PYTHON_CODE) // eslint-disable-line no-restricted-globals
     this.generateMatmulExercise = wrapGenerateMatmulExercise()
     this.generateMataddExercise = wrapGenerateMataddExercise()
   }
